@@ -5,7 +5,7 @@ This repository holds the final capstone project for the Data Science with Pytho
 # Project Goals:
 * **Explore and Analyze:** Conduct in-depth exploration of the car dataset to understand its characteristics and identify potential relationships between features.
 * **Visualize:** Create insightful data visualizations to uncover patterns, trends, and anomalies.
-* **Preprocess and Clean:** Address missing data, outliers, inconsistencies, and other data quality issues to prepare the data for modeling.
+* **Preprocess and Clean:** Address duplicate values, outliers, inconsistencies, and other data quality issues to prepare the data for modeling.
 * **Machine Learning Model Development:** Experiment with various machine learning techniques.
 * **Model Evaluation:** Employ metrics to assess model performance, compare different approaches, and select the best-performing model.
 * **Sample Prediction:** Demonstrate the functionality of the final model by generating predictions on sample data.
