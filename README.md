@@ -14,4 +14,4 @@ This repository holds the final capstone project for the Data Science with Pytho
 - Comprehensive EDA notebook for detailed data exploration.
 - Well-structured code for data preprocessing, modeling, and evaluation.
 - Clear documentation and comments within the code.
-- Streamlit app for interactive price prediction.# Data-Science-Capstone-Project
+- Streamlit app for interactive price prediction.
