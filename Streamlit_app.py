@@ -39,7 +39,7 @@ st.markdown(
         opacity: 0.3; 
         position: relative; 
         z-index: 1; 
-        padding: 40px 20px; 
+        padding: 40px 40px; 
         text-align: left; 
     }}
     .header h1 {{
