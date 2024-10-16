@@ -12,19 +12,20 @@ cleaned_data = pd.read_csv('Car_Details_Cleaned_Dataset.csv')
 # Define categorical columns
 categorical_col = ['Car_Brand', 'Car_Name', 'Fuel', 'Seller_Type', 'Transmission', 'Owner']
 
+# Load the LabelEncoders used during training
+label_encoders = {}
+for feature in categorical_col:
+    label_encoders[feature] = pickle.load(open(f'{feature}_label_encoder.pkl', 'rb'))
+
+# Load the pre-fitted StandardScaler
+scaler = pickle.load(open('scaler.pkl', 'rb'))
+
 # Function for encoding data
 def preprocess_data(df, label_encoders):
     for feature in df.columns:
         if feature in label_encoders:
             df[feature] = label_encoders[feature].transform(df[feature])
     return df
-
-# Load the LabelEncoders used during training
-label_encoders = {}
-for feature in categorical_col:
-    label_encoder = LabelEncoder()
-    label_encoder.fit(cleaned_data[feature])
-    label_encoders[feature] = label_encoder
 
 # Title of the app
 st.title("Car Selling Price Prediction App")
@@ -38,20 +39,18 @@ This application predicts the selling price of a car based on various features.
 """)
 
 # Display options for data
-# display_option = st.radio("Select Display Option:", ["No Data", "Loaded CSV Data", "Encoded Data"])
+display_option = st.radio("Select Display Option:", ["No Data", "Loaded CSV Data", "Encoded Data"])
 
 # Encode the loaded dataset
 encoded_data = preprocess_data(cleaned_data.copy(), label_encoders)
 
 # Display the selected data
-# if display_option == "No Data":
-#     st.subheader("Not displaying either the Loaded CSV File nor the Encoded Data")
-# elif display_option == "Loaded CSV Data":
-#     st.subheader("Loaded CSV Data:")
-#     st.write(cleaned_data)
-# elif display_option == "Encoded Data":
-#     st.subheader("Encoded Data:")
-#     st.write(encoded_data)
+if display_option == "Loaded CSV Data":
+    st.subheader("Loaded CSV Data:")
+    st.write(cleaned_data)
+elif display_option == "Encoded Data":
+    st.subheader("Encoded Data:")
+    st.write(encoded_data)
 
 # Display sliders for numerical features
 km_driven = st.slider("Select KM Driven:", min_value=int(cleaned_data["Km_Driven"].min()),
@@ -61,36 +60,33 @@ year = st.slider("Select Year:", min_value=int(cleaned_data["Year"].min()), max_
 # Display dropdowns for categorical features
 selected_brand = st.selectbox("Select Brand:", cleaned_data["Car_Brand"].unique())
 brand_filtered_df = cleaned_data[cleaned_data['Car_Brand'] == selected_brand]
-selected_model = st.selectbox("Select Model:", cleaned_data["Car_Model"].unique())
-model_filtered_df = cleaned_data[cleaned_data['Car_Model'] == selected_model]
+selected_model = st.selectbox("Select Model:", brand_filtered_df["Car_Name"].unique())
 selected_fuel = st.selectbox("Select Fuel:", cleaned_data["Fuel"].unique())
 selected_seller_type = st.selectbox("Select Seller Type:", cleaned_data["Seller_Type"].unique())
 selected_transmission = st.selectbox("Select Transmission:", cleaned_data["Transmission"].unique())
 selected_owner = st.selectbox("Select Owner:", cleaned_data["Owner"].unique())
 
 # Create a DataFrame from the user inputs
-input_data = pd.DataFrame({'Car_Brand': [selected_brand],
-    'Car_Model': [selected_model],
+input_data = pd.DataFrame({
+    'Car_Brand': [selected_brand],
+    'Car_Name': [selected_model],
     'Year': [year],
     'Km_Driven': [km_driven],
     'Fuel': [selected_fuel],
     'Seller_Type': [selected_seller_type],
     'Transmission': [selected_transmission],
-    'Owner': [selected_owner]})
-
-# st.subheader("Processed Input Data:")
-# st.write(input_data)
+    'Owner': [selected_owner]
+})
 
 # Preprocess the user input data using the same label encoders
 input_data_encoded = preprocess_data(input_data.copy(), label_encoders)
 
-# st.subheader("Processed Input Data (After Encoding):")
-# st.write(input_data_encoded)
+# Standardize numerical features using the pre-fitted StandardScaler
+input_data_encoded[numerical_cols] = scaler.transform(input_data_encoded[numerical_cols])
 
-# Standardize numerical features using scikit-learn's StandardScaler
-scaler = StandardScaler()
-numerical_cols = ['Year', 'Km_Driven']
-input_data_encoded[numerical_cols] = scaler.fit_transform(input_data_encoded[numerical_cols])
+# Display processed input data
+st.subheader("Processed Input Data:")
+st.write(input_data_encoded)
 
 # Make prediction using the loaded model
 if st.button("Predict Selling Price"):
