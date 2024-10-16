@@ -29,18 +29,22 @@ for feature in category_col:
 # Add CSS for background image
 image_path = "https://raw.githubusercontent.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/main/Header_image.jpg"
 st.markdown(
-    f"""
+     f"""
     <style>
     .header {{
-        background-color: grey;  /* Change to gray background */
-        position: sticky; 
-        top: 0; /* Stick to the top */
-        z-index: 2; /* Ensure it's above other content */
-        padding: 20px; /* Adjust padding as needed */
+        background-image: url('{image_path}');
+        background-size: cover;
+        background-position: center;
+        height: 200px; 
+        opacity: 0.3; 
+        position: relative; 
+        z-index: 1; 
+        padding: 40px 20px; 
         text-align: center; 
     }}
     .header h1 {{
         color: red;
+        position: sticky; 
         margin: 0; 
         padding: 5px; 
     }}
