@@ -27,6 +27,7 @@ for feature in category_col:
     label_encoders[feature] = label_encoder
 
 # Add CSS for background image
+# Add CSS for background image
 image_path = "https://raw.githubusercontent.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/main/Header_image.jpg"
 st.markdown(
     f"""
@@ -35,17 +36,18 @@ st.markdown(
         background-image: url('{image_path}');
         background-size: cover;
         background-position: center;
-        height: 150px; /* Adjust height as needed */
-        opacity: 0.3; /* Set opacity for transparency */
-        position: relative; /* To position child elements absolutely */
-        z-index: 1; /* Ensure it stays on top of other elements */
-        padding: 20px; /* Add some padding */
+        height: 150px; 
+        opacity: 0.3; 
+        position: relative; 
+        z-index: 1; 
+        padding: 40px 20px; 
+        text-align: center; 
     }}
     .header h1, .header h2 {{
-        color: white; /* Change text color to white for visibility */
-        position: relative; /* Position text relatively */
-        text-align: center; /* Center text */
-        margin: 0; /* Remove default margin */
+        color: black; 
+        position: relative; 
+        margin: 0; 
+        padding: 5px; 
     }}
     </style>
     <div class="header">
