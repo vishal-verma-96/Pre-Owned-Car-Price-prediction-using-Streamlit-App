@@ -43,14 +43,14 @@ st.markdown(
         text-align: center; 
     }}
     .header h1 {{
-        color: red;
-        position: sticky; 
+        color: grey;
+        position: relative; 
         margin: 0; 
         padding: 5px; 
     }}
     /* Add margin to body content */
     .body-content {{
-        margin-top: 30px; /* Adjust this value to increase/decrease space */
+        margin-top: 30px;
     }}
     </style>
     <div class="header">
