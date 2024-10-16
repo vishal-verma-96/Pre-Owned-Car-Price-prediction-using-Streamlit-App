@@ -37,9 +37,20 @@ st.markdown(
         background-position: center;
         height: 150px; /* Adjust height as needed */
         opacity: 0.3; /* Set opacity for transparency */
+        position: relative; /* To position child elements absolutely */
         z-index: -1; /* Ensure it stays behind other elements */
     }}
+    .header h1, .header h2 {{
+        color: white; /* Change text color to white for visibility */
+        position: absolute; /* Position text absolutely */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust to center */
+    }}
     </style>
+    <div class="header">
+        <h1>Car Selling Price Prediction App</h1>
+        <h2>Please provide the required details to predict the car's selling price.</h2>
+    </div>
     """,
     unsafe_allow_html=True
 )
