@@ -12,20 +12,19 @@ cleaned_data = pd.read_csv('Car_Details_Cleaned_Dataset.csv')
 # Define categorical columns
 categorical_col = ['Car_Brand', 'Car_Name', 'Fuel', 'Seller_Type', 'Transmission', 'Owner']
 
-# Load the LabelEncoders used during training
-label_encoders = {}
-for feature in categorical_col:
-    label_encoders[feature] = pickle.load(open(f'{feature}_label_encoder.pkl', 'rb'))
-
-# Load the pre-fitted StandardScaler
-scaler = pickle.load(open('scaler.pkl', 'rb'))
-
 # Function for encoding data
 def preprocess_data(df, label_encoders):
     for feature in df.columns:
         if feature in label_encoders:
             df[feature] = label_encoders[feature].transform(df[feature])
     return df
+
+# Load the LabelEncoders used during training
+label_encoders = {}
+for feature in category_col:
+    label_encoder = LabelEncoder()
+    label_encoder.fit(cleaned_data[feature])
+    label_encoders[feature] = label_encoder
 
 # Title of the app
 st.title("Car Selling Price Prediction App")
