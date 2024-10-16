@@ -27,7 +27,7 @@ for feature in category_col:
     label_encoders[feature] = label_encoder
 
 # Add CSS for background image
-image_path = "https://raw.githubusercontent.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/main/Header_image.jpg"
+image_path = "https://github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/main/automotive.jpg?raw=true"
 st.markdown(
     f"""
     <style>
@@ -44,7 +44,7 @@ st.markdown(
         padding: 0 100px;}}
     .header h1
     {{
-        color: red; 
+        color: White; 
         margin: 0; 
         padding: 20px; 
         text-align: left; 
