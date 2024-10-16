@@ -36,7 +36,7 @@ st.markdown(
         background-size: cover;
         background-position: center;
         height: 200px; 
-        opacity: 0.3; 
+        opacity: 0.5; 
         position: relative; 
         z-index: 1; 
         display: flex; 
