@@ -41,7 +41,7 @@ st.markdown(
         z-index: 1; 
         display: flex; 
         align-items: center; 
-        padding: 0 100px;}}
+        padding: -10 100px;}}
     .header h1
     {{
         color: White; 
