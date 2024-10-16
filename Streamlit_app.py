@@ -73,9 +73,9 @@ This application predicts the selling price of a car based on various features.
 encoded_data = preprocess_data(cleaned_data.copy(), label_encoders)
 
 # Display sliders for numerical features
-km_driven = st.slider("Select KM Driven:", min_value=int(cleaned_data["Km_Driven"].min()),
+km_driven = st.slider("Select Km Driven By Car:", min_value=int(cleaned_data["Km_Driven"].min()),
                       max_value=int(cleaned_data["Km_Driven"].max()))
-year = st.slider("Select Year:", min_value=int(cleaned_data["Year"].min()), max_value=int(cleaned_data["Year"].max()))
+year = st.slider("Select Purchasing Year:", min_value=int(cleaned_data["Year"].min()), max_value=int(cleaned_data["Year"].max()))
 
 # Display dropdowns for categorical features
 selected_brand = st.selectbox("Select Car Brand:", cleaned_data["Car_Brand"].unique())
