@@ -34,7 +34,7 @@ st.subheader("Please provide the required details to predict the car's selling p
 st.sidebar.markdown("""
 This application predicts the selling price of a car based on various features.
 ### How to use:
-1. **Select the Car Details:** Use the sliders and dropdowns to input the car details.
+1. **Select the Car Details:** Select the correct input of car characteristics from the provided options.
 2. **Predict Price:** Click on the 'Predict Selling Price' button to see the predicted price.
 """)
 
@@ -50,10 +50,10 @@ year = st.slider("Select Year:", min_value=int(cleaned_data["Year"].min()), max_
 selected_brand = st.selectbox("Select Car Brand:", cleaned_data["Car_Brand"].unique())
 brand_filtered_df = cleaned_data[cleaned_data['Car_Brand'] == selected_brand]
 selected_model = st.selectbox("Select Car Model:", brand_filtered_df["Car_Name"].unique())
-selected_fuel = st.selectbox("Select Fuel:", cleaned_data["Fuel"].unique())
-selected_seller_type = st.selectbox("Select Seller Type:", cleaned_data["Seller_Type"].unique())
-selected_transmission = st.selectbox("Select Transmission:", cleaned_data["Transmission"].unique())
-selected_owner = st.selectbox("Select Owner:", cleaned_data["Owner"].unique())
+selected_fuel = st.radio("Select Fuel:", cleaned_data["Fuel"].unique())
+selected_seller_type = st.radio("Select Seller Type:", cleaned_data["Seller_Type"].unique())
+selected_transmission = st.toggle("Select Transmission:", cleaned_data["Transmission"].unique())
+selected_owner = st.radio("Select Owner:", cleaned_data["Owner"].unique())
 
 # Create a DataFrame from the user inputs
 input_data = pd.DataFrame({'Car_Brand': [selected_brand],
