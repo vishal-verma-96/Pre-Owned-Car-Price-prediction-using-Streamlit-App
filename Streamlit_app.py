@@ -52,7 +52,7 @@ brand_filtered_df = cleaned_data[cleaned_data['Car_Brand'] == selected_brand]
 selected_model = st.selectbox("Select Car Model:", brand_filtered_df["Car_Name"].unique())
 selected_fuel = st.radio("Select Fuel:", cleaned_data["Fuel"].unique())
 selected_seller_type = st.radio("Select Seller Type:", cleaned_data["Seller_Type"].unique())
-selected_transmission = st.toggle("Select Transmission:", cleaned_data["Transmission"].unique())
+selected_transmission = st.selectbox("Select Transmission:", cleaned_data["Transmission"].unique())
 selected_owner = st.radio("Select Owner:", cleaned_data["Owner"].unique())
 
 # Create a DataFrame from the user inputs
