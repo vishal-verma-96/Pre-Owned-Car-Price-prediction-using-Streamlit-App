@@ -11,7 +11,7 @@ loaded_model = pickle.load(open('app.pkl', 'rb'))
 cleaned_data = pd.read_csv('Car_Details_Cleaned_Dataset.csv')
 
 # Define categorical columns
-category_col = ['Car_Brand', 'Car_Model', 'Fuel', 'Seller_Type', 'Transmission', 'Owner']
+category_col = ['Car_Brand', 'Car_Name', 'Fuel', 'Seller_Type', 'Transmission', 'Owner']
 
 # Function for encoding data
 def preprocess_data(df, label_encoders):
@@ -49,8 +49,8 @@ year = st.slider("Select Year:", min_value=int(cleaned_data["Year"].min()), max_
 # Display dropdowns for categorical features
 selected_brand = st.selectbox("Select Car Brand:", cleaned_data["Car_Brand"].unique())
 brand_filtered_df = cleaned_data[cleaned_data['Car_Brand'] == selected_brand]
-selected_model = st.selectbox("Select Car Model:", cleaned_data["Car_Model"].unique())
-model_filtered_df = cleaned_data[cleaned_data['Car_Model'] == selected_model]
+selected_model = st.selectbox("Select Car Model:", cleaned_data["Car_Name"].unique())
+model_filtered_df = cleaned_data[cleaned_data['Car_Name'] == selected_model]
 selected_fuel = st.selectbox("Select Fuel:", cleaned_data["Fuel"].unique())
 selected_seller_type = st.selectbox("Select Seller Type:", cleaned_data["Seller_Type"].unique())
 selected_transmission = st.selectbox("Select Transmission:", cleaned_data["Transmission"].unique())
@@ -58,7 +58,7 @@ selected_owner = st.selectbox("Select Owner:", cleaned_data["Owner"].unique())
 
 # Create a DataFrame from the user inputs
 input_data = pd.DataFrame({'Car_Brand': [selected_brand],
-    'Car_Model': [selected_model],
+    'Car_Name': [selected_model],
     'Year': [year],
     'Km_Driven': [km_driven],
     'Fuel': [selected_fuel],
