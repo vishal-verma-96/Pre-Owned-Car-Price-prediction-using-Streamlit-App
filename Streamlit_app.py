@@ -27,11 +27,12 @@ for feature in category_col:
     label_encoders[feature] = label_encoder
 
 # Add CSS for background image
+image_path = "https://raw.githubusercontent.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/main/Header_image.jpg"
 st.markdown(
     f"""
     <style>
     .header {{
-        background-image: url('{https://github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/main/Header_image.jpg?raw=true}');
+        background-image: url('{image_path}');
         background-size: cover;
         background-position: center;
         height: 150px; /* Adjust height as needed */
