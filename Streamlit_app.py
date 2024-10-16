@@ -32,18 +32,15 @@ st.markdown(
     f"""
     <style>
     .header {{
-        background-image: url('{image_path}');
-        background-size: cover;
-        background-position: center;
-        height: 200px; 
-        opacity: 0.3; 
-        position: relative; 
-        z-index: 1; 
-        padding: 40px 20px; 
+        background-color: grey;  /* Change to gray background */
+        position: sticky; 
+        top: 0; /* Stick to the top */
+        z-index: 2; /* Ensure it's above other content */
+        padding: 20px; /* Adjust padding as needed */
         text-align: center; 
     }}
     .header h1 {{
-        color: red; 
+        color: red;
         margin: 0; 
         padding: 5px; 
     }}
@@ -59,7 +56,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 
 # Providing Sidebar
 st.sidebar.markdown("""
