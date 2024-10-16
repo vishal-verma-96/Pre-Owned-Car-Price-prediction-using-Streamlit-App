@@ -31,7 +31,7 @@ st.markdown(
     f"""
     <style>
     .header {{
-        background-image: url('{https://github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/main/Header_image}');
+        background-image: url('{//github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/main/Header_image}');
         background-size: cover;
         background-position: center;
         height: 150px; /* Adjust height as needed */
