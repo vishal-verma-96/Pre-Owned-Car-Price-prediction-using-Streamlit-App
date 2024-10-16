@@ -40,7 +40,7 @@ st.markdown(
         position: relative; 
         z-index: 1; 
         padding: 40px 20px; 
-        text-align: center; 
+        text-align: left; 
     }}
     .header h1 {{
         color: grey;
