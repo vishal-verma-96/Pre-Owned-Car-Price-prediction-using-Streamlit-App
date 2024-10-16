@@ -49,8 +49,7 @@ year = st.slider("Select Year:", min_value=int(cleaned_data["Year"].min()), max_
 # Display dropdowns for categorical features
 selected_brand = st.selectbox("Select Car Brand:", cleaned_data["Car_Brand"].unique())
 brand_filtered_df = cleaned_data[cleaned_data['Car_Brand'] == selected_brand]
-selected_model = st.selectbox("Select Car Model:", cleaned_data["Car_Name"].unique())
-model_filtered_df = cleaned_data[cleaned_data['Car_Name'] == selected_model]
+selected_model = st.selectbox("Select Car Model:", brand_filtered_df["Car_Name"].unique())
 selected_fuel = st.selectbox("Select Fuel:", cleaned_data["Fuel"].unique())
 selected_seller_type = st.selectbox("Select Seller Type:", cleaned_data["Seller_Type"].unique())
 selected_transmission = st.selectbox("Select Transmission:", cleaned_data["Transmission"].unique())
