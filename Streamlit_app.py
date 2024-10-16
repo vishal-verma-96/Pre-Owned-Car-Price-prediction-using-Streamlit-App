@@ -29,7 +29,7 @@ for feature in category_col:
 # Add CSS for background image
 image_path = "https://raw.githubusercontent.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/main/Header_image.jpg"
 st.markdown(
-     f"""
+    f"""
     <style>
     .header {{
         background-image: url('{image_path}');
@@ -39,14 +39,16 @@ st.markdown(
         opacity: 0.3; 
         position: relative; 
         z-index: 1; 
-        padding: 60px 100px; 
-        text-align: left; 
+        display: flex; /* Use flexbox for positioning */
+        align-items: center; /* Center vertically */
+        padding: 0 100px; /* Horizontal padding */
     }}
     .header h1 {{
-        color: grey;
-        position: relative; 
+        color: grey; /* Change the text color */
         margin: 0; 
         padding: 20px; 
+        text-align: left; /* Align text to the left */
+        flex: 1; /* Allow the h1 to take full width */
     }}
     /* Add margin to body content */
     .body-content {{
