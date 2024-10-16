@@ -32,7 +32,7 @@ st.markdown(
     f"""
     <style>
     .header {{
-        background-image: url('{www.mahindrafirstchoice.com/assets/images/home_slider/2}');
+        background-image: url('{mahindrafirstchoice.com/assets/images/home_slider/2}');
         background-size: cover;
         background-position: center;
         height: 150px; /* Adjust height as needed */
