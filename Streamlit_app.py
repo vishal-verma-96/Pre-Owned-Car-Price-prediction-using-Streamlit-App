@@ -27,7 +27,6 @@ for feature in category_col:
     label_encoders[feature] = label_encoder
 
 # Add CSS for background image
-# Add CSS for background image
 image_path = "https://raw.githubusercontent.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/main/Header_image.jpg"
 st.markdown(
     f"""
@@ -43,19 +42,24 @@ st.markdown(
         padding: 40px 20px; 
         text-align: center; 
     }}
-    .header h1, .header h2 {{
-        color: red ; 
-        position: relative; 
+    .header h1 {{
+        color: red; 
         margin: 0; 
         padding: 5px; 
+    }}
+    /* Add margin to body content */
+    .body-content {{
+        margin-top: 30px; /* Adjust this value to increase/decrease space */
     }}
     </style>
     <div class="header">
         <h1>Car Selling Price Prediction App</h1>
     </div>
+    <div class="body-content">
     """,
     unsafe_allow_html=True
 )
+
 
 # Providing Sidebar
 st.sidebar.markdown("""
