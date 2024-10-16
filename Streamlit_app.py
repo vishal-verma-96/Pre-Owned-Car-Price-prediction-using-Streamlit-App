@@ -38,21 +38,8 @@ This application predicts the selling price of a car based on various features.
 2. **Predict Price:** Click on the 'Predict Selling Price' button to see the predicted price.
 """)
 
-# Display options for data
-# display_option = st.radio("Select Display Option:", ["No Data", "Loaded CSV Data", "Encoded Data"])
-
 # Encode the loaded dataset
 encoded_data = preprocess_data(cleaned_data.copy(), label_encoders)
-
-# Display the selected data
-# if display_option == "No Data":
-#     st.subheader("Not displaying either the Loaded CSV File nor the Encoded Data")
-# elif display_option == "Loaded CSV Data":
-#     st.subheader("Loaded CSV Data:")
-#     st.write(cleaned_data)
-# elif display_option == "Encoded Data":
-#     st.subheader("Encoded Data:")
-#     st.write(encoded_data)
 
 # Display sliders for numerical features
 km_driven = st.slider("Select KM Driven:", min_value=int(cleaned_data["Km_Driven"].min()),
@@ -80,14 +67,8 @@ input_data = pd.DataFrame({'Car_Brand': [selected_brand],
     'Owner': [selected_owner]
 })
 
-# st.subheader("Processed Input Data:")
-# st.write(input_data)
-
 # Preprocess the user input data using the same label encoders
 input_data_encoded = preprocess_data(input_data.copy(), label_encoders)
-
-# st.subheader("Processed Input Data (After Encoding):")
-# st.write(input_data_encoded)
 
 # Standardize numerical features using scikit-learn's StandardScaler
 scaler = StandardScaler()
