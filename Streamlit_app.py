@@ -36,7 +36,7 @@ st.markdown(
         background-image: url('{image_path}');
         background-size: cover;
         background-position: center;
-        height: 150px; 
+        height: 200px; 
         opacity: 0.3; 
         position: relative; 
         z-index: 1; 
@@ -44,7 +44,7 @@ st.markdown(
         text-align: center; 
     }}
     .header h1, .header h2 {{
-        color: black; 
+        color: red ; 
         position: relative; 
         margin: 0; 
         padding: 5px; 
