@@ -52,7 +52,6 @@ st.markdown(
     </style>
     <div class="header">
         <h1>Car Selling Price Prediction App</h1>
-        <h2>Please provide the required details to predict the car's selling price.</h2>
     </div>
     """,
     unsafe_allow_html=True
