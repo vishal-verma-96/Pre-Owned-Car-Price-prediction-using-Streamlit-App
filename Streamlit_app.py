@@ -21,7 +21,7 @@ def preprocess_data(df, label_encoders):
 
 # Load the LabelEncoders used during training
 label_encoders = {}
-for feature in category_col:
+for feature in categorical_col:
     label_encoder = LabelEncoder()
     label_encoder.fit(cleaned_data[feature])
     label_encoders[feature] = label_encoder
