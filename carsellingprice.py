@@ -20,11 +20,11 @@ def preprocess_data(df, label_encoders):
     return df
 
 # Load the LabelEncoders used during training
-label_encoder = {} 
-for i in categorical_col:
-    le = LabelEncoder()
-    data[i] = le.fit_transform(data[i])
-    label_encoder[i] = le
+label_encoders = {}
+for feature in category_col:
+    label_encoder = LabelEncoder()
+    label_encoder.fit(cleaned_data[feature])
+    label_encoders[feature] = label_encoder
 
 # Title of the app
 st.title("Car Selling Price Prediction App")
@@ -54,28 +54,29 @@ encoded_data = preprocess_data(cleaned_data.copy(), label_encoders)
 #     st.write(encoded_data)
 
 # Display sliders for numerical features
-km_driven = st.slider("Select KM Driven:", min_value=int(cleaned_data["km_driven"].min()),
-                      max_value=int(cleaned_data["km_driven"].max()))
-year = st.slider("Select Year:", min_value=int(cleaned_data["year"].min()), max_value=int(cleaned_data["year"].max()))
+km_driven = st.slider("Select KM Driven:", min_value=int(cleaned_data["Km_Driven"].min()),
+                      max_value=int(cleaned_data["Km_Driven"].max()))
+year = st.slider("Select Year:", min_value=int(cleaned_data["Year"].min()), max_value=int(cleaned_data["Year"].max()))
 
 # Display dropdowns for categorical features
-selected_brand = st.selectbox("Select Brand:", cleaned_data["brand"].unique())
-brand_filtered_df = cleaned_data[cleaned_data['brand'] == selected_brand]
-selected_fuel = st.selectbox("Select Fuel:", cleaned_data["fuel"].unique())
-selected_seller_type = st.selectbox("Select Seller Type:", cleaned_data["seller_type"].unique())
-selected_transmission = st.selectbox("Select Transmission:", cleaned_data["transmission"].unique())
-selected_owner = st.selectbox("Select Owner:", cleaned_data["owner"].unique())
+selected_brand = st.selectbox("Select Brand:", cleaned_data["Car_Brand"].unique())
+brand_filtered_df = cleaned_data[cleaned_data['Car_Brand'] == selected_brand]
+selected_model = st.selectbox("Select Model:", cleaned_data["Car_Model"].unique())
+model_filtered_df = cleaned_data[cleaned_data['Car_Model'] == selected_model]
+selected_fuel = st.selectbox("Select Fuel:", cleaned_data["Fuel"].unique())
+selected_seller_type = st.selectbox("Select Seller Type:", cleaned_data["Seller_Type"].unique())
+selected_transmission = st.selectbox("Select Transmission:", cleaned_data["Transmission"].unique())
+selected_owner = st.selectbox("Select Owner:", cleaned_data["Owner"].unique())
 
 # Create a DataFrame from the user inputs
-input_data = pd.DataFrame({
-    'brand': [selected_brand],
-    'year': [year],
-    'km_driven': [km_driven],
-    'fuel': [selected_fuel],
-    'seller_type': [selected_seller_type],
-    'transmission': [selected_transmission],
-    'owner': [selected_owner]
-})
+input_data = pd.DataFrame({'Car_Brand': [selected_brand]
+    'Car_Model': [selected_model],
+    'Year': [year],
+    'Km_Driven': [km_driven],
+    'Fuel': [selected_fuel],
+    'Seller_Type': [selected_seller_type],
+    'Transmission': [selected_transmission],
+    'Owner': [selected_owner]})
 
 # st.subheader("Processed Input Data:")
 # st.write(input_data)
@@ -88,7 +89,7 @@ input_data_encoded = preprocess_data(input_data.copy(), label_encoders)
 
 # Standardize numerical features using scikit-learn's StandardScaler
 scaler = StandardScaler()
-numerical_cols = ['year', 'km_driven']
+numerical_cols = ['Year', 'Km_Driven']
 input_data_encoded[numerical_cols] = scaler.fit_transform(input_data_encoded[numerical_cols])
 
 # Make prediction using the loaded model
