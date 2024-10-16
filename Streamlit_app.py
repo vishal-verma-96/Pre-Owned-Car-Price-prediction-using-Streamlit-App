@@ -38,13 +38,14 @@ st.markdown(
         height: 150px; /* Adjust height as needed */
         opacity: 0.3; /* Set opacity for transparency */
         position: relative; /* To position child elements absolutely */
-        z-index: -1; /* Ensure it stays behind other elements */
+        z-index: 1; /* Ensure it stays on top of other elements */
+        padding: 20px; /* Add some padding */
     }}
     .header h1, .header h2 {{
         color: white; /* Change text color to white for visibility */
-        position: absolute; /* Position text absolutely */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Adjust to center */
+        position: relative; /* Position text relatively */
+        text-align: center; /* Center text */
+        margin: 0; /* Remove default margin */
     }}
     </style>
     <div class="header">
