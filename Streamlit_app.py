@@ -44,7 +44,7 @@ st.markdown(
         padding: 0 100px; /* Horizontal padding */
     }}
     .header h1 {{
-        color: grey; /* Change the text color */
+        color: black; /* Change the text color */
         margin: 0; 
         padding: 20px; 
         text-align: left; /* Align text to the left */
