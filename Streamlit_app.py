@@ -27,6 +27,24 @@ for feature in category_col:
     label_encoder.fit(cleaned_data[feature])
     label_encoders[feature] = label_encoder
 
+# Add CSS for background image
+st.markdown(
+    f"""
+    <style>
+    .header {{
+        background-image: url('{https://www.mahindrafirstchoice.com/assets/images/home_slider/2.jpg}');
+        background-size: cover;
+        background-position: center;
+        height: 150px; /* Adjust height as needed */
+        opacity: 0.3; /* Set opacity for transparency */
+        z-index: -1; /* Ensure it stays behind other elements */
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # Title of the app
 st.title("Car Selling Price Prediction App")
 st.subheader("Please provide the required details to predict the car's selling price.")
