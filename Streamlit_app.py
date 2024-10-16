@@ -55,18 +55,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
-# Title of the app
-st.title("Car Selling Price Prediction App")
-st.subheader("Please provide the required details to predict the car's selling price.")
-
-st.sidebar.markdown("""
-This application predicts the selling price of a car based on various features.
-### How to use:
-1. **Select the Car Details:** Select the correct input of car characteristics from the provided options.
-2. **Predict Price:** Click on the 'Predict Selling Price' button to see the predicted price.
-""")
-
 # Encode the loaded dataset
 encoded_data = preprocess_data(cleaned_data.copy(), label_encoders)
 
