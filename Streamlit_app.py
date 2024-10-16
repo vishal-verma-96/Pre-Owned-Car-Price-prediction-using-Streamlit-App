@@ -39,24 +39,22 @@ st.markdown(
         opacity: 0.3; 
         position: relative; 
         z-index: 1; 
-        display: flex; /* Use flexbox for positioning */
-        align-items: center; /* Center vertically */
-        padding: 0 100px; /* Horizontal padding */
-    }}
-    .header h1 {{
-        color: navy; /* Change the text color */
+        display: flex; 
+        align-items: center; 
+        padding: 0 100px;}}
+    .header h1
+    {{
+        color: red; 
         margin: 0; 
         padding: 20px; 
-        text-align: left; /* Align text to the left */
-        flex: 1; /* Allow the h1 to take full width */
-    }}
-    /* Add margin to body content */
+        text-align: left; 
+        flex: 1;}}
     .body-content {{
         margin-top: 30px;
     }}
     </style>
     <div class="header">
-        <h1>Car Selling Price Prediction App</h1>
+        <h1><i>Car Selling Price Prediction App</i></h1>
     </div>
     <div class="body-content">
     """,
