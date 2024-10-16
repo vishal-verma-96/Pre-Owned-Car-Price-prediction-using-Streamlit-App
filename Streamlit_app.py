@@ -70,7 +70,7 @@ selected_transmission = st.selectbox("Select Transmission:", cleaned_data["Trans
 selected_owner = st.selectbox("Select Owner:", cleaned_data["Owner"].unique())
 
 # Create a DataFrame from the user inputs
-input_data = pd.DataFrame({'Car_Brand': [selected_brand]
+input_data = pd.DataFrame({'Car_Brand': [selected_brand],
     'Car_Model': [selected_model],
     'Year': [year],
     'Km_Driven': [km_driven],
