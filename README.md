@@ -11,7 +11,20 @@ This repository holds the final capstone project for the Data Science with Pytho
 * **Sample Prediction:** Demonstrate the functionality of the final model by generating predictions on sample data.
 * **Streamlit Deployment:** Develop a user-friendly web application using Streamlit for real-time car price predictions based on user-provided parameters.
 # Features:
-- Comprehensive EDA notebook for detailed data exploration.
-- Well-structured code for data preprocessing, modeling, and evaluation.
-- Clear documentation and comments within the code.
-- Streamlit app for interactive price prediction.
+The columns in the given raw dataset are as follows:
+
+```Car_Name:``` Name of Car sold
+
+```Year:``` Year in which car was bought from showroom (means by car company not by any seller)
+
+```Selling_Price:``` Price at which car sold
+
+```Kms_Driven:``` Number of Kilometers Car driven before it is sold
+
+```Fuel_Type:``` Type of fuel Car uses
+
+```Seller_Type:``` Type of seller 
+
+```Transmission:``` Gear transmission of the car (Automatic / Manual)
+
+```Owner:``` Number of previous owners 
