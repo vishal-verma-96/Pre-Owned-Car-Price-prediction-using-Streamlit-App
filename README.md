@@ -1,4 +1,5 @@
-# **Data-Science-Capstone-Project**
+<h1 align="center">Data Science Capstone Project</h1>
+
 ## Description:
 This repository contains the final capstone project for the Data Science with Python Career Program at Skill Academy. The project focuses on predicting the selling prices of pre-owned cars using a dataset of car details. It includes exploratory data analysis (EDA), training and evaluating predictive models and deploying a user-friendly web application using Streamlit. Users can input car details on the app, and the predicted selling price will be displayed on the interface.
 
