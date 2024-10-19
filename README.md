@@ -1,10 +1,10 @@
 # **Data-Science-Capstone-Project**
-# Description:
+### Description:
 This repository contains the final capstone project for the Data Science with Python Career Program at Skill Academy. The project focuses on predicting the selling prices of pre-owned cars using a dataset of car details. It includes exploratory data analysis (EDA), training and evaluating predictive models and deploying a user-friendly web application using Streamlit. Users can input car details on the app, and the predicted selling price will be displayed on the interface.
 
 <img src = "https://github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/501dbfa3ffde34144dbf8262f5ec2b39e5f07f82/Readme_image.jpg">
 
-# Project Goals:
+### Project Goals:
 * **Explore and Analyze:** Conduct an in-depth exploration of the car dataset to understand its characteristics and identify potential relationships between features.
 * **Visualize:** Create insightful data visualizations to uncover patterns, trends, and anomalies.
 * **Preprocess and Clean:** Address duplicate values, outliers, inconsistencies, and other data quality issues to prepare the data for modeling.
@@ -13,7 +13,7 @@ This repository contains the final capstone project for the Data Science with Py
 * **Sample Prediction:** Demonstrate the functionality of the final model by generating predictions on sample data.
 * **Streamlit Deployment:** Develop a user-friendly web application using Streamlit for real-time car price predictions based on user-provided parameters.
 
-# Dataset Preview:
+### Dataset Preview:
 A preview of the top five rows of the original or raw dataset.
 
 | | name | year | selling_price | kms_driven | fuel | seller_type | transmission | owner |
@@ -24,7 +24,7 @@ A preview of the top five rows of the original or raw dataset.
 |3|	Datsun RediGO T Option | 2017 | 250000 | 46000 | Petrol	| Individual | Manual	| First Owner
 |4|	Honda Amaze VX i-DTEC | 2014 | 450000	| 141000 | Diesel	| Individual | Manual	| Second Owner
 
-# Description of features of the dataset:
+### Description of features of the dataset:
 The describing the features of raw dataset, which were shown above, are as follows:
 
 ```Car_Name:``` Name of Car sold
