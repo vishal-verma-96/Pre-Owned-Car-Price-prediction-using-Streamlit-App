@@ -14,7 +14,7 @@ This repository contains the final capstone project for the Data Science with Py
 * **Streamlit Deployment:** Develop a user-friendly web application using Streamlit for real-time car price predictions based on user-provided parameters.
 
 # Dataset Preview:
-A preview of the top five rows of the original dataset.
+A preview of the top five rows of the original or raw dataset.
 
 | | name | year | selling_price | kms_driven | fuel | seller_type | transmission | owner |
 |-| ---------------------------- | ---- | ------------- | ---------- | ---- | ----------- | ------------ | ----- |
