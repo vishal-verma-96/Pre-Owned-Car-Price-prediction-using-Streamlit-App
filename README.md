@@ -1,9 +1,10 @@
 # **Data-Science-Capstone-Project**
 # Description:
-This repository holds the final capstone project for the Data Science with Python Career Program by Skill Academy. It utilizes a Car Details dataset to perform Exploratory Data Analysis (EDA), train and evaluate a model to predict car prices, and deploy a web application using Streamlit for user-driven predictions.
+This repository holds the final capstone project on Pre-owned car price prediction, for the Data Science with Python Career Program, by Skill Academy. It utilizes a Pre-owned car details dataset to perform Exploratory Data Analysis (EDA), train and evaluate a model to predict car prices using the model, and deploy a web application using Streamlit for user-driven predictions.
+<img src = "https://github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/501dbfa3ffde34144dbf8262f5ec2b39e5f07f82/Readme_image.jpg">
 
 # Project Goals:
-* **Explore and Analyze:** Conduct in-depth exploration of the car dataset to understand its characteristics and identify potential relationships between features.
+* **Explore and Analyze:** Conduct an in-depth exploration of the car dataset to understand its characteristics and identify potential relationships between features.
 * **Visualize:** Create insightful data visualizations to uncover patterns, trends, and anomalies.
 * **Preprocess and Clean:** Address duplicate values, outliers, inconsistencies, and other data quality issues to prepare the data for modeling.
 * **Machine Learning Model Development:** Experiment with various machine learning techniques.
@@ -15,7 +16,7 @@ The columns in the given raw dataset are as follows:
 
 ```Car_Name:``` Name of Car sold
 
-```Year:``` Year in which car was bought from showroom (means by car company not by any seller)
+```Year:``` Year in which the car was bought from the showroom (means by the car company, not by any seller)
 
 ```Selling_Price:``` Price at which car sold
 
