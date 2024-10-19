@@ -17,7 +17,7 @@ This repository contains the final capstone project for the Data Science with Py
 A preview of the top five rows of the original dataset.
 
 | | name | year | selling_price | kms_driven | fuel | seller_type | transmission | owner |
-|-| ---------------------------- | ---- | ------------- | ---------- | ---- | ----------- | ------------ | ----- |
+|-| ---------------------------- | ---- | ------------- | ---------- | ---- | ----------- | --------- | ----- |
 |0| Maruti 800 AC |	2007 | 60000 | 70000 | Petrol | Individual | Manual | First Owner
 |1|	Maruti Wagon R LXI Minor | 2007 | 135000 | 50000 | Petrol | Individual | Manual | First Owner
 |2|	Hyundai Verna 1.6 SX | 2012 | 600000 | 100000	| Diesel | Individual | Manual | First Owner
