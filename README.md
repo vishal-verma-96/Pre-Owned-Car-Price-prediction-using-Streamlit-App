@@ -42,3 +42,12 @@ The describing the features of raw dataset, which were shown above, are as follo
 ```Transmission:``` Gear transmission of the car (Automatic / Manual)
 
 ```Owner:``` Number of previous owners 
+
+# Technologies Used:
+* Numpy
+* Pandas
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Pickle
+* Streamlit
