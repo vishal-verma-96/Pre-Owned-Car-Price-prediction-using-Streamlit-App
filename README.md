@@ -1,6 +1,7 @@
 # **Data-Science-Capstone-Project**
 # Description:
 This repository holds the final capstone project on Pre-owned car price prediction, for the Data Science with Python Career Program, by Skill Academy. It utilizes a Pre-owned car details dataset to perform Exploratory Data Analysis (EDA), train and evaluate a model to predict car prices using the model, and deploy a web application using Streamlit for user-driven predictions.
+
 <img src = "https://github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/501dbfa3ffde34144dbf8262f5ec2b39e5f07f82/Readme_image.jpg">
 
 # Project Goals:
