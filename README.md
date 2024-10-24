@@ -45,6 +45,7 @@ The describing the features of raw dataset, which were shown above, are as follo
 ```Owner:``` Number of previous owners 
 
 ## Technologies Used:
+* Python
 * Numpy
 * Pandas
 * Matplotlib
