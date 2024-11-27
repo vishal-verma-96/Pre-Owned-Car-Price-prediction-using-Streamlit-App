@@ -66,7 +66,7 @@ st.sidebar.markdown("""
 This application predicts the selling price of a car based on various features.
 ### How to use:
 1. **Select the Car Details:** Select the correct input of car characteristics from the provided options.
-2. **Predict Price:** Click on the 'Predict Selling Price' button to see the predicted price.
+2. **Predict Price:** Click on the 'Submit' button to see the predicted price.
 """)
 
 # Encode the loaded dataset
@@ -106,7 +106,7 @@ numerical_cols = ['Year', 'Km_Driven']
 input_data_encoded[numerical_cols] = scaler.fit_transform(input_data_encoded[numerical_cols])
 
 # Make prediction using the loaded model
-if st.button("Predict Selling Price"):
+if st.button("Submit"):
     # Make predictions
     predicted_price = loaded_model.predict(input_data_encoded)
     st.subheader("Predicted Selling Price:")
