@@ -27,7 +27,7 @@ for feature in category_col:
     label_encoders[feature] = label_encoder
 
 # Add CSS for background image
-image_path = "https://github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/main/automotive.jpg?raw=true"
+image_path = "https://github.com/vishal-verma-96/Capstone_Project_By_Skill_Academy/blob/main/automobile.jpg?raw=true"
 st.markdown(
     f"""
     <style>
