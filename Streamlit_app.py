@@ -46,7 +46,7 @@ st.markdown(
     {{
         color: White; 
         margin: 0; 
-        padding: 20px; 
+        padding: 18px; 
         text-align: left; 
         flex: 1;}}
     .body-content {{
